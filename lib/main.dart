@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/day_5/scaffold.dart';
+import 'package:flutter_application_1/day_5/tugas1Flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //home: ScaffoldDay5(),
+      home: Tugas1flutter(),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
