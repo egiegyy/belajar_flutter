@@ -98,6 +98,7 @@ class Tugas3flutter extends StatelessWidget {
                     TextField(
                       showCursor: true,
                       autofocus: true,
+                      obscureText: true,
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
