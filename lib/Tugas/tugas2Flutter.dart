@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Tugas2flutter extends StatelessWidget {
@@ -21,6 +20,7 @@ class Tugas2flutter extends StatelessWidget {
         //nomor 2
         centerTitle: true,
       ),
+      
       body: Column(
           mainAxisAlignment: MainAxisAlignment.start, 
           children: [
