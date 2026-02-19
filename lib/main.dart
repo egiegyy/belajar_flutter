@@ -35,7 +35,13 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //home: ScaffoldDay5(),
-      home: Tugas4flutter(),
+      home: Tugas3flutter()
+      
+      
+      
+      
+      
+      ,
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

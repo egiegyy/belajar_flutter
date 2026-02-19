@@ -39,6 +39,7 @@ class Tugas3flutter extends StatelessWidget {
                 Column(
                   children: [
                     TextField(
+                      style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
                       textAlign: TextAlign.start,
@@ -58,6 +59,7 @@ class Tugas3flutter extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TextField(
+                      style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
                       textAlign: TextAlign.start,
@@ -77,6 +79,7 @@ class Tugas3flutter extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TextField(
+                      style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
                       textAlign: TextAlign.start,
@@ -96,6 +99,7 @@ class Tugas3flutter extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TextField(
+                      style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
                       obscureText: true,
@@ -139,100 +143,100 @@ class Tugas3flutter extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     GridView.count(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 5,
-                  crossAxisSpacing: 5,
-                  children: [
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(15),
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 5,
+                    children: [
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
+                          Icon(Icons.facebook, size: 30, color: Colors.white),
+                        ],
+                      ),
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                          Icon(Icons.g_mobiledata_rounded, size: 30, color: Colors.white),
+                        ],
+                      ),
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                          Icon(Icons.snapchat_outlined, size: 30, color: Colors.white),
+                        ],
+                      ),
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                          Icon(Icons.facebook, size: 30, color: Colors.white),
+                        ],
+                      ),
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                          Icon(Icons.g_mobiledata_rounded, size: 30, color: Colors.white),
+                        ],
+                      ),
+                      Stack(
+                        alignment: AlignmentGeometry.center,
+                        children: [
+                          Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                          Icon(Icons.snapchat_outlined, size: 30, color: Colors.white),
+                          ],
                         ),
-                        Icon(Icons.facebook, size: 30, color: Colors.white),
                       ],
                     ),
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        Icon(Icons.g_mobiledata_rounded, size: 30, color: Colors.white),
-                      ],
-                    ),
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        Icon(Icons.snapchat_outlined, size: 30, color: Colors.white),
-                      ],
-                    ),
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        Icon(Icons.facebook, size: 30, color: Colors.white),
-                      ],
-                    ),
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.grey,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        Icon(Icons.g_mobiledata_rounded, size: 30, color: Colors.white),
-                      ],
-                    ),
-                    Stack(
-                      alignment: AlignmentGeometry.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
-                        Icon(Icons.snapchat_outlined, size: 30, color: Colors.white),
-                      ],
-                    ),
-                  ],
+                  ]
                 ),
-                ]
-              ),
               )
             ],
           ),
