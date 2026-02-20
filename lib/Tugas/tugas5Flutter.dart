@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 
 class Tugas5flutter extends StatefulWidget {
+  // StatefulWidget untuk membuat widget yang dapat berubah-ubah sesuai dengan interaksi pengguna
   const Tugas5flutter({super.key});
 
   @override
+  //createState untuk membuat state dari widget yang akan digunakan untuk menyimpan data yang dapat berubah-ubah
   State<Tugas5flutter> createState() => _Tugas5flutterState();
 }
 
 class _Tugas5flutterState extends State<Tugas5flutter> {
+  //deklarasi variabel untuk menyimpan data yang dapat berubah-ubah
   bool showImage = false;
   bool bookmark = false;
   bool isSaved = false;
   int _counter = 0;
 
+  //fungsi untuk mengurangi nilai counter dan mencetak nilai counter ke console
   void decrement() {
     _counter--;
     print("Nilai dari _Counter :$_counter");
     setState(() {});
   }
-
+  //fungsi untuk menambah nilai counter dan mencetak nilai counter ke console dengan parameter textPrint untuk mencetak teks tambahan saat fungsi dipanggil
   void increment({String? textPrint}) {
     _counter++;
     print("Nilai dari _Counter :$_counter");
@@ -82,12 +86,18 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                               ),
-                              trailing: ElevatedButton(
-                                onPressed: () {
-                                  setState(() {
-                                    showImage = !showImage;
-                                  });
-                                }, child: Text(showImage ? "Less" : "More",
+                              trailing: 
+                              // ElevatedButton untuk membuat tombol dengan tampilan yang lebih menarik dan dapat diatur sesuai kebutuhan
+                                ElevatedButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      //showImage untuk menampilkan dan menyembunyikan gambar saat tombol ditekan
+                                      showImage = !showImage;
+                                    }
+                                  );
+                                }, 
+                                //child untuk menampilkan teks pada tombol yang berubah sesuai dengan kondisi showImage dengan boolean
+                                child: Text(showImage ? "Less" : "More",
                                 style: 
                                 TextStyle(
                                   fontSize: 14,
@@ -101,6 +111,7 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                     ),
                     SizedBox(height: 20),
                     // Nomor 1 (bisa menampilkan dan menyembunyikan gambar)
+                    //kondisi untuk menampilkan gambar jika showImage bernilai true
                     if (showImage)
                       Container(
                         padding: EdgeInsets.all(20),
@@ -110,7 +121,7 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                         ),
                         child: Column(
                           children: [
-                            // Nomor 4 menggunakan inkWell untuk menampilkan warna dan menampilkan teks saat ditekan
+                            // Nomor 4 menggunakan inkWell untuk menampilkan warna dan menampilkan teks saat ditekan dengan inkWell yang membungkus widget gambar dan teks yang ingin ditampilkan saat gambar ditekan
                             InkWell(
                               splashColor: Colors.blue.withAlpha(100),
                               onTap: () {
@@ -133,6 +144,7 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                             ),
                             SizedBox(height: 10),
                             Row(
+                              //space between untuk memberikan jarak antara widget yang berada di kiri dan kanan dengan widget yang berada di tengah
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 // Nomor 3 (membuat tombol dengan TextButton)
@@ -149,7 +161,9 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                                 style: TextStyle(
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
+                                  color: Colors.white
+                                  )
+                                ),
                                 Column(
                                   children: [
                                     // Nomor 2 (Icon berubah warna dan muncul teks saat ditekan)
@@ -161,9 +175,11 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                                       },
                                     icon: Icon(
                                       Icons.bookmark, 
+                                      //color berubah sesuai dengan kondisi bookmark dengan boolean
                                       color: bookmark ? Colors.blue : Colors.grey, 
                                       size: 30) 
                                     ),
+                                    // kondisi untuk menampilkan teks "Saved" jika isSaved bernilai true
                                     if (!isSaved)
                                       Text(
                                         "Saved",
@@ -190,10 +206,11 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                         ),
                       ),
                       // Nomor 5 
+                      // GestureDetector untuk membuat widget yang dapat mendeteksi berbagai jenis interaksi pengguna seperti tap, double tap, long press, dan lain-lain dengan membungkus widget yang ingin dideteksi interaksinya
                       GestureDetector(
-                        onTap: decrement,
+                        onTap: decrement, //memanggil fungsi decrement saat widget ditekan
                         onDoubleTap: () {
-                          increment(textPrint: "On Double Press");
+                          increment(textPrint: "On Double Press"); //memanggil fungsi increment dengan parameter textPrint saat widget ditekan dua kali
                         },
                         onLongPress: () {
                          increment(textPrint: "On long Press");

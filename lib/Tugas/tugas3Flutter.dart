@@ -22,6 +22,9 @@ class Tugas3flutter extends StatelessWidget {
       body: 
       Padding(padding: EdgeInsetsGeometry.all(30),
       child: 
+        //singleChildScrollView untuk membuat tampilan dapat di scroll
+        //scrollDirection untuk mengatur arah scroll
+        //physics untuk mengatur efek scroll
         SingleChildScrollView(
           child: Column(
             children: [
@@ -30,6 +33,7 @@ class Tugas3flutter extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.center,
+                //decoration untuk memberikan dekorasi pada container
                 decoration: BoxDecoration(
                   color: Colors.grey.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(15),
@@ -40,8 +44,11 @@ class Tugas3flutter extends StatelessWidget {
                   children: [
                     TextField(
                       style: TextStyle(color: Colors.white),
+                      //showCursor untuk menampilkan kursor pada textfield jika aktif
                       showCursor: true,
+                      //autofocus untuk membuat textfield otomatis aktif saat pertama kali dibuka
                       autofocus: true,
+                      //mengatur posisi text pada textfield
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -51,9 +58,12 @@ class Tugas3flutter extends StatelessWidget {
                           width: 5
                           )
                         ),
+                        //prefixIcon untuk menambahkan ikon di dalam textfield
                         prefixIcon: Icon(Icons.person, size: 20, color: Colors.white),
+                        //hintText untuk memberikan petunjuk pada textfield saat belum diisi 
                         hintText: "Please input your name",
                         hintStyle: TextStyle(color: Colors.white, fontSize: 14),
+                        //labelText untuk memberikan label pada textfield saat di klik
                         labelText: "Name",
                       ),
                     ),
@@ -145,14 +155,19 @@ class Tugas3flutter extends StatelessWidget {
                     GridView.count(
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
+                    //crossAxisCount untuk mengatur jumlah kolom pada gridview jika lebih akan turun
                     crossAxisCount: 3,
+                    //mengatur jarak vertikal antar gridview
                     mainAxisSpacing: 5,
+                    //mengatur jarak horizontal antar gridview
                     crossAxisSpacing: 5,
                     children: [
+                      //Stack untuk menumpuk widget di atas widget lain
                       Stack(
                         alignment: AlignmentGeometry.center,
                         children: [
                           Container(
+                            //double.infinity untuk membuat ukuran container mengikuti ukuran parentnya
                             height: double.infinity,
                             width: double.infinity,
                             decoration: BoxDecoration(

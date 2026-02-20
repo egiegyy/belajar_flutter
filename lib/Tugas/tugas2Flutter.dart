@@ -17,13 +17,16 @@ class Tugas2flutter extends StatelessWidget {
             color: Colors.white
           ),
         ),
-        //nomor 2
+        //nomor 2 : untuk membuat judul pada appbar ada di tengah
         centerTitle: true,
       ),
       
-      body: Column(
+      body: 
+      //column untuk menyusun widget secara vertikal
+      Column(
           mainAxisAlignment: MainAxisAlignment.start, 
           children: [
+            //membungkus widget agar berada di tengah
               Center(
               child: Text("Salsabil Trainer",
               style: TextStyle(
@@ -33,32 +36,40 @@ class Tugas2flutter extends StatelessWidget {
             ),  
           ),
           Center(
-            child: 
+            child:
+            //container konten untuk menampilkan kotak yang dapat menjadi wadah untuk widget lain 
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
                 color: Colors.brown
               ),
-              child: Row(
+              child: 
+              //row untuk menyusun widget secara horizontal
+              Row(
+                //mainAxisAlignment untuk mengatur posisi widget secara vertikal
                 mainAxisAlignment: MainAxisAlignment.center,
+                //crossAxisAlignment untuk mengatur posisi widget secara horizontal
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text("salsabilbutterfly@gmail.com",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Colors.white
-                  ),),
+                  //memberikan dan mengatur style pada text
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.white
+                    ),
+                  ),
+                  //sizebox untuk memberikan jarak antara widget secara horizontal atau vertikal
                   SizedBox(width: 20),
-                  Icon(Icons.import_contacts,
-                  color: Colors.white)
+                  Icon(Icons.import_contacts,color: Colors.white)
                 ],
               ),
             ),
           ),
           //nomor 4
           Container(
+            //padding untuk memberikan jarak antara konten dengan border tertentu
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),

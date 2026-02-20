@@ -6,6 +6,7 @@ class Tugas1flutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar : bagian atas di tampilan aplikasi
       appBar: AppBar(
         backgroundColor:Color(0xff005F02),
         title: Text("Profil Saya",
@@ -15,6 +16,7 @@ class Tugas1flutter extends StatelessWidget {
         ),
         centerTitle: true,
       ), 
+      //appbar : bagian atas bawah setelah appbar di tampilan aplikasi
       body: Column(
         children: [
           Text("Nama: Regina Alya", 

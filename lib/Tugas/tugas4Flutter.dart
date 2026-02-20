@@ -22,6 +22,7 @@ class Tugas4flutter extends StatelessWidget {
       body:
       Padding(padding: EdgeInsetsGeometry.all(20),
       child:
+      //listview untuk membuat tampilan seperti list yang dapat di scroll secara vertikal tanpa menggunakan column dan singlechildscrollview
       ListView(
         children: [
           Container(
@@ -126,6 +127,7 @@ class Tugas4flutter extends StatelessWidget {
                 ),
                 padding: EdgeInsets.all(10),
                 child: 
+                //ListTile untuk membuat tampilan seperti list dengan leading, title, subtitle, dan trailing tanpa harus membuatnya secara manual
                 ListTile(
                   contentPadding: EdgeInsets.all(10),
                   leading: Icon(Icons.person, size: 40, color: Colors.white),
@@ -144,7 +146,12 @@ class Tugas4flutter extends StatelessWidget {
                       fontWeight: FontWeight.w300,
                       color: Colors.white
                     ),
+                    //maxLines untuk mengatur jumlah baris maksimal pada subtitle jika lebih akan dihilangkan dan diganti dengan titik tiga
                     maxLines: 2,
+                    //overflow untuk mengatur bagaimana teks yang melebihi batas ditampilkan
+                    //TextOverflow.ellipsis untuk mengganti teks yang melebihi batas dengan titik tiga
+                    //TextOverflow.fade untuk memudar teks yang melebihi batas
+                    //TextOverflow.clip untuk memotong teks yang melebihi batas tanpa mengganti dengan titik tiga atau memudar
                     overflow: TextOverflow.ellipsis,
                   ),
                   trailing: Text(
