@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/tugas5Flutter.dart';
-import 'package:flutter_application_1/Tugas/tugas6FlutterS1.dart';
-import 'package:flutter_application_1/Tugas/tugas6FlutterS2.dart';
 import 'package:flutter_application_1/Tugas/tugas6FlutterS3.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //home: ScaffoldDay5(),
-      home: Home(),
+      home: HomePage(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
