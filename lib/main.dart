@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
 import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS2.dart';
 import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
+import 'package:flutter_application_1/Tugas/tugas1Flutter.dart';
+import 'package:flutter_application_1/Tugas/tugas2Flutter.dart';
+import 'package:flutter_application_1/Tugas/tugas3Flutter.dart';
+import 'package:flutter_application_1/Tugas/tugas4Flutter.dart';
+import 'package:flutter_application_1/Tugas/tugas5Flutter.dart';
+import 'package:flutter_application_1/cobaCoba.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //home: ScaffoldDay5(),
-      home: SignUp(),
+      home: SignIn(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

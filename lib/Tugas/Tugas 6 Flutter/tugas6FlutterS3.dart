@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Halo Faza,",
+                "Halo Farhan,",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
                 "Your routine",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
                             "Push Day",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 "More",
-                                style: TextStyle(color: Colors.blue),
+                                style: TextStyle(color: Colors.green),
                               ),
                             ),
                           ),
@@ -157,7 +157,7 @@ class HomePage extends StatelessWidget {
                             "Pull Day",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -176,7 +176,7 @@ class HomePage extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 "More",
-                                style: TextStyle(color: Colors.blue),
+                                style: TextStyle(color: Colors.green),
                               ),
                             ),
                           ),
@@ -203,7 +203,7 @@ class HomePage extends StatelessWidget {
                             "Leg Day",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 "More",
-                                style: TextStyle(color: Colors.blue),
+                                style: TextStyle(color: Colors.green),
                               ),
                             ),
                           ),
@@ -249,7 +249,7 @@ class HomePage extends StatelessWidget {
                             "Upper Day",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -268,7 +268,7 @@ class HomePage extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 "More",
-                                style: TextStyle(color: Colors.blue),
+                                style: TextStyle(color: Colors.green),
                               ),
                             ),
                           ),
@@ -283,7 +283,7 @@ class HomePage extends StatelessWidget {
                 "Package Exercise",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -296,7 +296,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.blue,
                   ),
                 ),
                 subtitle: Text(
@@ -312,7 +312,7 @@ class HomePage extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.blue)),
+                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
                 ),
               ),
               Divider(),
@@ -324,7 +324,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.blue,
                   ),
                 ),
                 subtitle: Text(
@@ -340,9 +340,10 @@ class HomePage extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.blue)),
+                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
                 ),
               ),
+              SizedBox(height: 10),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

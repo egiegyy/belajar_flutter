@@ -229,12 +229,7 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
                               )
                           ],
                       ),
-                              SizedBox(height: 10),
-      //                     floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.qr_code),
-      //   onPressed: () {},
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+                              SizedBox(height: 10)
                 ],
               ),
             ],
