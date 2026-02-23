@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/tugas6FlutterS2.dart';
-import 'package:flutter_application_1/Tugas/tugas6FlutterS3.dart';
+import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS2.dart';
+import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});

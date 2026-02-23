@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/tugas6Flutters1.dart';
+import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
