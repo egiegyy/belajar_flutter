@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Tugas/tugas6FlutterS2.dart';
+import 'package:flutter_application_1/Tugas/tugas6FlutterS3.dart';
 
-class Tugas6SignIn extends StatelessWidget {
-  const Tugas6SignIn({super.key});
+class SignIn extends StatelessWidget {
+  const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+          size: 30,
+        ),
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
@@ -104,12 +110,22 @@ class Tugas6SignIn extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {}, 
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue 
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return HomePage();
+                              }
+                            )
+                          );
+                        }, 
                         child: Text(
                           "Sign In", 
                         style: 
                         TextStyle(
-                          color: Colors.black, 
+                          color: Colors.white, 
                           fontSize: 14,
                           fontWeight: FontWeight.bold)
                         )
@@ -118,7 +134,14 @@ class Tugas6SignIn extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () {}, 
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return SignUp();
+                              }
+                            )
+                          );
+                        }, 
                         child: 
                         Text(
                           "Sign Up", 

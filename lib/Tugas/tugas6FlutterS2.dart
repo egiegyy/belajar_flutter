@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Tugas/tugas6Flutters1.dart';
 
-class Tugas6SignUp extends StatelessWidget {
-  const Tugas6SignUp({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+          size: 30,
+        ),
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
@@ -148,11 +153,21 @@ class Tugas6SignUp extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue 
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (context) {
+                                  return SignIn();
+                                  }
+                                )
+                              );
+                            },
                             child: Text(
-                              "Sign In",
+                              "Sign Up",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -162,9 +177,16 @@ class Tugas6SignUp extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pop(
+                                MaterialPageRoute(builder: (context) {
+                                  return SignIn();
+                                  }
+                                )
+                              );
+                            },
                             child: Text(
-                              "Sign Up",
+                              "Sign In",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,

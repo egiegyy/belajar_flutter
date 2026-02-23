@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Tugas/tugas6Flutters1.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,8 +9,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+          size: 30,
+        ),
         backgroundColor: Colors.black,
-        leading: Icon(Icons.arrow_back_rounded, color: Colors.white, size: 30),
         centerTitle: true,
         title: Text(
           "Home",
@@ -113,7 +117,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "apa aja nanti latihannya disini aja ya ges ya ketiknya",
+                            "Bench Press, Shoulder Press, Lateral Raise, Tricep Pushdown",
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -159,7 +163,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "apa aja nanti latihannya disini aja ya ges ya ketiknya",
+                            "Lat Pulldown, Seated Cable Row, Face Pull, Hammer Curl",
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -205,7 +209,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "apa aja nanti latihannya disini aja ya ges ya ketiknya",
+                            "Barbell Squat, Leg Press, Hip Thrust, Leg Curl, Standing Calf Raise",
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -251,7 +255,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "apa aja nanti latihannya disini aja ya ges ya ketiknya",
+                            "Bench Press, Lat Pulldown, Seated Row, Shoulder Press, Bicep Curl",
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -342,17 +346,21 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue 
+                  ),
                   onPressed: () {},
                   child: Text(
-                    "Sign In",
+                    "See More Package",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 20)
             ],
           ),
         ),
