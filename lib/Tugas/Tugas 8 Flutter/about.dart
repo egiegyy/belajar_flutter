@@ -12,6 +12,7 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
@@ -27,16 +28,12 @@ class _AboutPageState extends State<AboutPage> {
       body: Padding(padding: EdgeInsetsGeometry.all(20),
       child: Column(
         children: [
-          Text(
-            "FitgGuide",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              color: Colors.white
-            ),
-          ),
+          Image.asset("assets/images/logoFitGuide.png"),
           Text("FitGuide is a fitness app that helps users plan and follow structured gym workouts, providing guided exercises and personalized routines to achieve better fitness results.",
           maxLines: 10,
+          style: TextStyle(
+            color: Colors.white
+          ),
           )
         ],
       ),

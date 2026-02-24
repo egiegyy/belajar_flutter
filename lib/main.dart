@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Tugas/Tugas%208%20Flutter/about.dart';
 import 'package:flutter_application_1/Tugas/Tugas%208%20Flutter/tugas8Flutter.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas8flutter(),
+      home: AboutPage(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
