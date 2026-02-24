@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/checkbox.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/datePicker.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/dropdown.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/switch.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/timePicker.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class TugasDrawer extends StatelessWidget {
+  const TugasDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +29,109 @@ class HomePage extends StatelessWidget {
           ),
         ),
         actions: [Icon(Icons.search_rounded, color: Colors.white, size: 30)],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(20),
+              width: double.infinity,
+              height: 150,
+              color: Colors.black,
+              alignment: Alignment.bottomLeft,
+              child:
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("FitGuide",
+                  style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold
+                  ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TugasCheckbox();
+                    }
+                  )
+                );
+              } ,
+              leading: Icon(Icons.checklist_rounded),
+              title: Text("Syarat dan Ketentuan",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TugasSwitch();
+                    }
+                  )
+                );
+              } ,
+              leading: Icon(Icons.light_mode),
+              title: Text("Mode Gelap",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TugasDropDown();
+                    }
+                  )
+                );
+              } ,
+              leading: Icon(Icons.production_quantity_limits_rounded),
+              title: Text("Pilih Kategori Produk",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),
+              ),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TugasDatePicker();
+                    }
+                  )
+                );
+              } ,
+              leading: Icon(Icons.lock_clock_rounded),
+              title: Text("Pilih Tanggal Lahir",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TugasTimePicker();
+                    }
+                  )
+                );
+              } ,
+              leading: Icon(Icons.date_range),
+              title: Text("Atur Pengingat",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),),
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: EdgeInsetsGeometry.all(20),

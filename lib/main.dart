@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS2.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
-import 'package:flutter_application_1/Tugas/tugas1Flutter.dart';
-import 'package:flutter_application_1/Tugas/tugas2Flutter.dart';
-import 'package:flutter_application_1/Tugas/tugas3Flutter.dart';
-import 'package:flutter_application_1/Tugas/tugas4Flutter.dart';
-import 'package:flutter_application_1/Tugas/tugas5Flutter.dart';
-import 'package:flutter_application_1/cobaCoba.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/checkbox.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/datePicker.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/drawer.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/dropdown.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/switch.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/timePicker.dart';
+import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/cobaCoba.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +38,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      //home: ScaffoldDay5(),
-      home: SignIn(),
+      home: TugasDrawer(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
