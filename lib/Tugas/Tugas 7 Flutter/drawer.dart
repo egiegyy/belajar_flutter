@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
+// import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
 import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/checkbox.dart';
 import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/datePicker.dart';
 import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/dropdown.dart';

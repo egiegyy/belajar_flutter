@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/checkbox.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/datePicker.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/drawer.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/dropdown.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/switch.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/timePicker.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/cobaCoba.dart';
+import 'package:flutter_application_1/Tugas/Tugas%208%20Flutter/tugas8Flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TugasDrawer(),
+      home: Tugas8flutter(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
