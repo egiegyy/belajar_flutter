@@ -29,8 +29,7 @@ class _Tugas5flutterState extends State<Tugas5flutter> {
     print("$textPrint :$_counter");
     setState(() {});
   }
-
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

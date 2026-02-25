@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/checkbox.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/datePicker.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/dropdown.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/switch.dart';
-import 'package:flutter_application_1/Tugas/Tugas%207%20Flutter/timePicker.dart';
+import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9List.dart';
+import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9ListMap.dart';
+import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9Model.dart';
 
-class TugasDrawer extends StatelessWidget {
-  const TugasDrawer({super.key});
+class Tugas9Flutter extends StatelessWidget {
+  const Tugas9Flutter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,13 +56,13 @@ class TugasDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return TugasCheckbox();
+                    return T9ListExercise();
                     }
                   )
                 );
               } ,
               leading: Icon(Icons.checklist_rounded),
-              title: Text("Syarat dan Ketentuan",
+              title: Text("Data Latihan",
               style: TextStyle(
                 fontWeight: FontWeight.bold
               ),),
@@ -73,13 +71,13 @@ class TugasDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return TugasSwitch();
+                    return T9ListMap();
                     }
                   )
                 );
               } ,
-              leading: Icon(Icons.light_mode),
-              title: Text("Mode Gelap",
+              leading: Icon(Icons.add_box),
+              title: Text("Jenis Latihan",
               style: TextStyle(
                 fontWeight: FontWeight.bold
               ),),
@@ -88,47 +86,17 @@ class TugasDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return TugasDropDown();
+                    return T9Model();
                     }
                   )
                 );
               } ,
-              leading: Icon(Icons.production_quantity_limits_rounded),
-              title: Text("Pilih Kategori Produk",
+              leading: Icon(Icons.account_circle),
+              title: Text("Personal Trainer",
               style: TextStyle(
                 fontWeight: FontWeight.bold
               ),
               ),
-            ),
-            ListTile(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasDatePicker();
-                    }
-                  )
-                );
-              } ,
-              leading: Icon(Icons.lock_clock_rounded),
-              title: Text("Pilih Tanggal Lahir",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
-            ),
-            ListTile(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasTimePicker();
-                    }
-                  )
-                );
-              } ,
-              leading: Icon(Icons.date_range),
-              title: Text("Atur Pengingat",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
             ),
           ],
         ),
