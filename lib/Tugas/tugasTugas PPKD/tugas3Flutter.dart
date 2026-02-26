@@ -42,13 +42,13 @@ class Tugas3flutter extends StatelessWidget {
                 child: 
                 Column(
                   children: [
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
-                      //showCursor untuk menampilkan kursor pada textfield jika aktif
+                      //showCursor untuk menampilkan kursor pada TextFormField jika aktif
                       showCursor: true,
-                      //autofocus untuk membuat textfield otomatis aktif saat pertama kali dibuka
+                      //autofocus untuk membuat TextFormField otomatis aktif saat pertama kali dibuka
                       autofocus: true,
-                      //mengatur posisi text pada textfield
+                      //mengatur posisi text pada TextFormField
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -58,17 +58,17 @@ class Tugas3flutter extends StatelessWidget {
                           width: 5
                           )
                         ),
-                        //prefixIcon untuk menambahkan ikon di dalam textfield
+                        //prefixIcon untuk menambahkan ikon di dalam TextFormField
                         prefixIcon: Icon(Icons.person, size: 20, color: Colors.white),
-                        //hintText untuk memberikan petunjuk pada textfield saat belum diisi 
+                        //hintText untuk memberikan petunjuk pada TextFormField saat belum diisi 
                         hintText: "Please input your name",
                         hintStyle: TextStyle(color: Colors.white, fontSize: 14),
-                        //labelText untuk memberikan label pada textfield saat di klik
+                        //labelText untuk memberikan label pada TextFormField saat di klik
                         labelText: "Name",
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
@@ -88,7 +88,7 @@ class Tugas3flutter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
@@ -108,7 +108,7 @@ class Tugas3flutter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,

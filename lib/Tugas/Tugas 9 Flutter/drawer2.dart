@@ -4,8 +4,8 @@ import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9List.dart'
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9ListMap.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9Model.dart';
 
-class Tugas9Flutter extends StatelessWidget {
-  const Tugas9Flutter({super.key});
+class TugasDrawer2 extends StatelessWidget {
+  const TugasDrawer2({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,6 +5,7 @@ import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/drawer2.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9List.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9ListMap.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9Model.dart';
+import 'package:flutter_application_1/tugas10Flutter.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas9Flutter()
+      home: T10SignUp()
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

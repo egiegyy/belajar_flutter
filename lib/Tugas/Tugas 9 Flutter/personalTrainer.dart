@@ -1,4 +1,3 @@
-
 class PersonalTrainer {
   String? name;
   String? ability;

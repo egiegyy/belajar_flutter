@@ -35,7 +35,7 @@ class Tugas4flutter extends StatelessWidget {
                 child: 
                 Column(
                   children: [
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
@@ -55,7 +55,7 @@ class Tugas4flutter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
@@ -75,7 +75,7 @@ class Tugas4flutter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
@@ -95,7 +95,7 @@ class Tugas4flutter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    TextField(
+                    TextFormField(
                       style: TextStyle(color: Colors.white),
                       showCursor: true,
                       autofocus: true,
