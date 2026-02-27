@@ -20,7 +20,6 @@ void visibilityOnOff() {
     isVisibility = !isVisibility;
   });
 }
-
 void dialogSuccess(BuildContext context) {
   showDialog(
     context: context,
@@ -142,6 +141,10 @@ void dialogError(BuildContext context) {
                                   width: 5,
                                 ),
                               ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green),
+                                borderRadius: BorderRadius.circular(15)
+                              ),
                               //prefixIcon untuk menambahkan ikon di dalam TextFormField
                               prefixIcon: Icon(
                                 Icons.person,
@@ -173,6 +176,10 @@ void dialogError(BuildContext context) {
                                   color: Colors.white,
                                   width: 5,
                                 ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green),
+                                borderRadius: BorderRadius.circular(15)
                               ),
                               prefixIcon: Icon(
                                 Icons.email_rounded,
@@ -214,6 +221,10 @@ void dialogError(BuildContext context) {
                                   width: 5,
                                 ),
                               ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green),
+                                borderRadius: BorderRadius.circular(15)
+                              ),
                               prefixIcon: Icon(
                                 Icons.phone,
                                 size: 20,
@@ -252,6 +263,10 @@ void dialogError(BuildContext context) {
                                 color: Colors.white,
                                 width: 5,
                               ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(15)
                             ),
                             hintText: "Please input your password",
                             hintStyle: TextStyle(
@@ -328,7 +343,7 @@ void dialogError(BuildContext context) {
                           width: double.infinity,
                           child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue
+                            backgroundColor: Colors.green
                           ),
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
