@@ -5,19 +5,11 @@ class UserModel {
   final int? id;
   final String? email;
   final String? password;
-  UserModel({
-    this.id,
-    this.email,
-    this.password,
-  });
+  UserModel({this.id, this.email, this.password});
 
   //untuk mengirim data yang diambil
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
-      'email': email,
-      'password': password,
-    };
+    return <String, dynamic>{'id': id, 'email': email, 'password': password};
   }
 
   //untuk mengambil data (penamaan harus sesuai)
@@ -31,5 +23,6 @@ class UserModel {
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserModel.fromJson(String source) =>
+      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

@@ -9,10 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white,
-          size: 30,
-        ),
+        iconTheme: IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
@@ -232,7 +229,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(width: 10),
                     //tabel rutinitas user 4
                     Container(
-                      // height: 100, 
+                      // height: 100,
                       width: 150,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
@@ -312,7 +309,13 @@ class HomePage extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
               Divider(),
@@ -340,16 +343,20 @@ class HomePage extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue 
-                  ),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                   onPressed: () {},
                   child: Text(
                     "See More Package",
@@ -361,7 +368,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20)
+              SizedBox(height: 20),
             ],
           ),
         ),

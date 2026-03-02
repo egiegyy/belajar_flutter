@@ -9,10 +9,7 @@ class SignUp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white,
-          size: 30,
-        ),
+        iconTheme: IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
@@ -154,14 +151,15 @@ class SignUp extends StatelessWidget {
                           width: double.infinity,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue 
+                              backgroundColor: Colors.blue,
                             ),
                             onPressed: () {
                               Navigator.of(context).push(
-                                MaterialPageRoute(builder: (context) {
-                                  return SignIn();
-                                  }
-                                )
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return SignIn();
+                                  },
+                                ),
                               );
                             },
                             child: Text(
@@ -179,10 +177,11 @@ class SignUp extends StatelessWidget {
                           child: OutlinedButton(
                             onPressed: () {
                               Navigator.of(context).pop(
-                                MaterialPageRoute(builder: (context) {
-                                  return SignIn();
-                                  }
-                                )
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return SignIn();
+                                  },
+                                ),
                               );
                             },
                             child: Text(

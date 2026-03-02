@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
-import 'package:flutter_application_1/day%2016/loginpage.dart';
+import 'package:flutter_application_1/day%2016/view/loginpage.dart';
 import 'package:flutter_application_1/day%2016/database/preference.dart';
 import 'package:flutter_application_1/extention/navigator.dart';
+
 class SplashScreenDay16 extends StatefulWidget {
   const SplashScreenDay16({super.key});
 
