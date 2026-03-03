@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas%2011%20Flutter/controller/progress_controller.dart';
-import 'package:flutter_application_1/Tugas%2011%20Flutter/utils/decoration_form.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/controller/progress_controller.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/utils/decoration_form.dart';
 import '../model/progress_model.dart';
 
 class ProgressUI extends StatefulWidget {

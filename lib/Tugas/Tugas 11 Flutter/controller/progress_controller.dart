@@ -1,4 +1,4 @@
-import 'package:flutter_application_1/Tugas%2011%20Flutter/database/sqflite.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/database/sqflite.dart';
 import '../model/progress_model.dart';
 
 class UserController {
