@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/view/progress.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/progress.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9List.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9ListMap.dart';
 import 'package:flutter_application_1/Tugas/Tugas%209%20Flutter/tugas9Model.dart';

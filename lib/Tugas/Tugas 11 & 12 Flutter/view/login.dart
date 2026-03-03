@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/database/share_preference.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/view/drawer3.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/database/share_preference.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/drawer3.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});

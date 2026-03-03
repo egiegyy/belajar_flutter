@@ -14,7 +14,7 @@ InputDecoration decorationConstant({
         ? Icon(prefixIcon, color: Colors.white)
         : null,
     labelStyle: const TextStyle(color: Colors.white),
-    floatingLabelStyle: TextStyle(color: Colors.blue),
+    floatingLabelStyle: TextStyle(color: Colors.green),
     //border diam
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
@@ -23,7 +23,7 @@ InputDecoration decorationConstant({
     //border fokus
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color: Colors.blue, width: 2),
+      borderSide: const BorderSide(color: Colors.green, width: 2),
     ),
     //error
     errorBorder: OutlineInputBorder(

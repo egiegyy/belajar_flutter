@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/view/login.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/view/progress.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/login.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/progress.dart';
 import 'package:flutter_application_1/Tugas/tugasTugas%20PPKD/tugas4Flutter.dart';
 
 void main() {
