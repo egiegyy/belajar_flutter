@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20Flutter/pendaftaran.dart';
-import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS1.dart';
-import 'package:flutter_application_1/day%2016/view/cr_siswa.dart';
-import 'package:flutter_application_1/day%2016/view/loginpage.dart';
+import 'package:flutter_application_1/Tugas%2011%20Flutter/view/login.dart';
+import 'package:flutter_application_1/Tugas%2011%20Flutter/view/progress.dart';
+import 'package:flutter_application_1/Tugas/tugasTugas%20PPKD/tugas4Flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: PendaftaranPage(),
+      home: SignInPage(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
