@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/login.dart';
 import 'package:flutter_application_1/Tugas/Tugas%2011%20&%2012%20Flutter/view/progress.dart';
-import 'package:flutter_application_1/Tugas/tugasTugas%20PPKD/tugas4Flutter.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/views/splash_screen.dart';
+import 'package:flutter_application_1/Tugas/Tugas%206%20Flutter/tugas6FlutterS3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SignInPage(),
+      home: const SplashScreen(),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

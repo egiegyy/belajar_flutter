@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 class ProgressModel {
-  int? id; // ✅ TAMBAH INI
+  int? id;
   String name;
   String age;
   String weight;
   String height;
 
   ProgressModel({
-    this.id, // ✅ TAMBAH
+    this.id, 
     required this.name,
     required this.age,
     required this.weight,
@@ -17,7 +17,7 @@ class ProgressModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id, // ✅ TAMBAH
+      'id': id,
       'name': name,
       'age': age,
       'weight': weight,
@@ -27,7 +27,7 @@ class ProgressModel {
 
   factory ProgressModel.fromMap(Map<String, dynamic> map) {
     return ProgressModel(
-      id: map['id'], // ✅ TAMBAH
+      id: map['id'], 
       name: map['name'] ?? '',
       age: map['age'] ?? '',
       weight: map['weight'] ?? '',

@@ -14,10 +14,7 @@ class TugasDrawer extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white,
-          size: 30,
-        ),
+        iconTheme: IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
@@ -39,16 +36,16 @@ class TugasDrawer extends StatelessWidget {
               height: 150,
               color: Colors.black,
               alignment: Alignment.bottomLeft,
-              child:
-              Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("FitGuide",
-                  style: TextStyle(
-                    fontSize: 35,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                  ),
+                  Text(
+                    "FitGuide",
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -57,78 +54,82 @@ class TugasDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasCheckbox();
-                    }
-                  )
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TugasCheckbox();
+                    },
+                  ),
                 );
-              } ,
+              },
               leading: Icon(Icons.checklist_rounded),
-              title: Text("Syarat dan Ketentuan",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
+              title: Text(
+                "Syarat dan Ketentuan",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             ListTile(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasSwitch();
-                    }
-                  )
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TugasSwitch();
+                    },
+                  ),
                 );
-              } ,
+              },
               leading: Icon(Icons.light_mode),
-              title: Text("Mode Gelap",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
+              title: Text(
+                "Mode Gelap",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             ListTile(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasDropDown();
-                    }
-                  )
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TugasDropDown();
+                    },
+                  ),
                 );
-              } ,
+              },
               leading: Icon(Icons.production_quantity_limits_rounded),
-              title: Text("Pilih Kategori Produk",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),
+              title: Text(
+                "Pilih Kategori Produk",
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
             ListTile(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasDatePicker();
-                    }
-                  )
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TugasDatePicker();
+                    },
+                  ),
                 );
-              } ,
+              },
               leading: Icon(Icons.lock_clock_rounded),
-              title: Text("Pilih Tanggal Lahir",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
+              title: Text(
+                "Pilih Tanggal Lahir",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             ListTile(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return TugasTimePicker();
-                    }
-                  )
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TugasTimePicker();
+                    },
+                  ),
                 );
-              } ,
+              },
               leading: Icon(Icons.date_range),
-              title: Text("Atur Pengingat",
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
+              title: Text(
+                "Atur Pengingat",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
@@ -141,7 +142,7 @@ class TugasDrawer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Hai Hanna,",
+                "Halo,",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -340,7 +341,7 @@ class TugasDrawer extends StatelessWidget {
                     SizedBox(width: 10),
                     //tabel rutinitas user 4
                     Container(
-                      // height: 100, 
+                      // height: 100,
                       width: 150,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
@@ -420,7 +421,13 @@ class TugasDrawer extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
               Divider(),
@@ -448,16 +455,20 @@ class TugasDrawer extends StatelessWidget {
                 trailing: TextButton(
                   style: ButtonStyle(),
                   onPressed: () {},
-                  child: Text("More", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue 
-                  ),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                   onPressed: () {},
                   child: Text(
                     "See More Package",
@@ -469,7 +480,7 @@ class TugasDrawer extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20)
+              SizedBox(height: 20),
             ],
           ),
         ),

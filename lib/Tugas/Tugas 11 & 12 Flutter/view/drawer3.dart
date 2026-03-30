@@ -28,7 +28,7 @@ class _Drawer3State extends State<Drawer3> {
             color: Colors.white,
           ),
         ),
-        actions: [Icon(Icons.search_rounded, color: Colors.white, size: 30)],
+        actions: [Icon(Icons.account_circle, color: Colors.white, size: 30)],
       ),
       drawer: Drawer(
         child: Column(

@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Hai Hanna,",
+                "Halo,",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
