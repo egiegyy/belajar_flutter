@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/models/pokemon_models.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
   static const String _baseUrl = 'https://pokeapi.co/api/v2';
+  static const String _favoriteStorageKey = 'pokemon_favorites';
 
   Future<List<PokemonItem>> getPokemonByType(String type) async {
     final uri = Uri.parse('$_baseUrl/type/$type');
@@ -106,5 +108,76 @@ class ApiService {
 
     final data = json.decode(response.body) as Map<String, dynamic>;
     return PokemonDetail.fromJson(data);
+  }
+
+  Future<List<FavoritePokemon>> getFavoritePokemon() async {
+    final prefs = await SharedPreferences.getInstance();
+    final rawList = prefs.getStringList(_favoriteStorageKey) ?? [];
+
+    return rawList
+        .map((item) => FavoritePokemon.fromMap(json.decode(item)))
+        .toList();
+  }
+
+  Future<void> putFavoritePokemon(FavoritePokemon favorite) async {
+    final favorites = await getFavoritePokemon();
+    final index = favorites.indexWhere(
+      (item) => item.favoriteId == favorite.favoriteId,
+    );
+
+    if (index >= 0) {
+      favorites[index] = favorite;
+    } else {
+      favorites.add(favorite);
+    }
+
+    await _saveFavorites(favorites);
+  }
+
+  Future<void> updateFavoritePokemon(FavoritePokemon favorite) async {
+    final favorites = await getFavoritePokemon();
+    final index = favorites.indexWhere(
+      (item) => item.favoriteId == favorite.favoriteId,
+    );
+
+    if (index < 0) {
+      throw Exception('Favorite Pokemon tidak ditemukan.');
+    }
+
+    favorites[index] = favorite;
+    await _saveFavorites(favorites);
+  }
+
+  Future<void> addManualFavoritePokemon({
+    required String name,
+    required String typeLabel,
+    String imageUrl = '',
+  }) async {
+    final favorite = FavoritePokemon(
+      favoriteId: 'manual-${DateTime.now().millisecondsSinceEpoch}',
+      name: name,
+      typeLabel: typeLabel,
+      imageUrl: imageUrl,
+      isManual: true,
+    );
+
+    await putFavoritePokemon(favorite);
+  }
+
+  Future<void> deleteFavoritePokemon(String favoriteId) async {
+    final favorites = await getFavoritePokemon();
+    favorites.removeWhere((item) => item.favoriteId == favoriteId);
+    await _saveFavorites(favorites);
+  }
+
+  Future<bool> isFavorite(String favoriteId) async {
+    final favorites = await getFavoritePokemon();
+    return favorites.any((item) => item.favoriteId == favoriteId);
+  }
+
+  Future<void> _saveFavorites(List<FavoritePokemon> favorites) async {
+    final prefs = await SharedPreferences.getInstance();
+    final rawList = favorites.map((item) => json.encode(item.toMap())).toList();
+    await prefs.setStringList(_favoriteStorageKey, rawList);
   }
 }

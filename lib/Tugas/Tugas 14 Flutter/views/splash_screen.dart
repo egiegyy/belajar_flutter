@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/views/type_selection_screen.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenPokemon extends StatefulWidget {
+  const SplashScreenPokemon({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenPokemon> createState() => _SplashScreenPokemonState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenPokemonState extends State<SplashScreenPokemon> {
   bool _isVisible = false;
 
   @override

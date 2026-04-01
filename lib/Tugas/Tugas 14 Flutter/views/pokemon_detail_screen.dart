@@ -6,12 +6,14 @@ class PokemonDetailScreen extends StatefulWidget {
   final String pokemonName;
   final String pokemonUrl;
   final Color accentColor;
+  final String? typeLabel;
 
   const PokemonDetailScreen({
     super.key,
     required this.pokemonName,
     required this.pokemonUrl,
     required this.accentColor,
+    this.typeLabel,
   });
 
   @override
@@ -23,6 +25,7 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
   bool _isLoading = true;
   String? _error;
   PokemonDetail? _detail;
+  bool _isFavorite = false;
 
   @override
   void initState() {
@@ -44,6 +47,8 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
         _detail = result;
         _isLoading = false;
       });
+
+      await _loadFavoriteStatus(result);
     } catch (e) {
       if (!mounted) return;
       setState(() {
@@ -51,6 +56,45 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
         _isLoading = false;
       });
     }
+  }
+
+  Future<void> _loadFavoriteStatus(PokemonDetail detail) async {
+    final isFavorite = await _apiService.isFavorite('pokemon-${detail.id}');
+    if (!mounted) return;
+    setState(() => _isFavorite = isFavorite);
+  }
+
+  Future<void> _toggleFavorite() async {
+    final detail = _detail;
+    if (detail == null) return;
+
+    final favoriteId = 'pokemon-${detail.id}';
+
+    if (_isFavorite) {
+      await _apiService.deleteFavoritePokemon(favoriteId);
+      if (!mounted) return;
+      setState(() => _isFavorite = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Pokemon dihapus dari favorite.')),
+      );
+      return;
+    }
+
+    final favorite = FavoritePokemon(
+      favoriteId: favoriteId,
+      name: detail.name,
+      typeLabel: widget.typeLabel ?? detail.types.join(', '),
+      imageUrl: detail.imageUrl,
+      pokemonUrl: widget.pokemonUrl,
+      isManual: false,
+    );
+
+    await _apiService.putFavoritePokemon(favorite);
+    if (!mounted) return;
+    setState(() => _isFavorite = true);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Pokemon ditambahkan ke favorite.')),
+    );
   }
 
   @override
@@ -115,9 +159,50 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
                         ),
                       ),
                       const SizedBox(height: 10),
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: data.types
+                            .map(
+                              (type) => Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 6,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: widget.accentColor.withAlpha(60),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                    color: widget.accentColor.withAlpha(140),
+                                  ),
+                                ),
+                                child: Text(
+                                  type.toUpperCase(),
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            )
+                            .toList(),
+                      ),
+                      const SizedBox(height: 10),
                       Hero(
                         tag: 'pokemon-${data.id}',
-                        child: Image.network(data.imageUrl, height: 200),
+                        child: Image.network(
+                          data.imageUrl,
+                          height: 200,
+                          errorBuilder: (_, __, ___) {
+                            return const Icon(
+                              Icons.broken_image,
+                              color: Colors.white70,
+                              size: 100,
+                            );
+                          },
+                        ),
                       ),
                       const SizedBox(height: 22),
                       _InfoCard(
@@ -161,7 +246,13 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
             child: const Icon(Icons.arrow_back, color: Colors.white),
           ),
           const Spacer(),
-          Icon(Icons.favorite_border, color: widget.accentColor),
+          GestureDetector(
+            onTap: _toggleFavorite,
+            child: Icon(
+              _isFavorite ? Icons.favorite : Icons.favorite_border,
+              color: widget.accentColor,
+            ),
+          ),
         ],
       ),
     );
@@ -184,11 +275,18 @@ class _InfoCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: const Color(0xFF1A2238),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(color: color.withAlpha(140)),
+        boxShadow: [
+          BoxShadow(
+            color: color.withAlpha(35),
+            blurRadius: 14,
+            offset: const Offset(0, 6),
+          ),
+        ],
       ),
       child: RichText(
         text: TextSpan(

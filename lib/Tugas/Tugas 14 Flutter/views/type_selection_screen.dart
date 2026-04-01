@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/views/favorite_screen.dart';
 import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/views/pokemon_list_screen.dart';
+import 'package:flutter_application_1/Tugas/Tugas%2014%20Flutter/widgets/type_card.dart';
 
 class TypeSelectionScreen extends StatelessWidget {
   const TypeSelectionScreen({super.key});
@@ -69,19 +71,44 @@ class TypeSelectionScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //BACKGROUND DECORATIONS
-                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          'What Are You\nLooking For?',
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            height: 1.3,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const FavoriteScreen(),
+                            ),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.favorite,
+                          color: Colors.redAccent,
+                          size: 28,
+                        ),
+                      ),
+                    ],
+                  ),
                   const Text(
-                    'What Are You\nLooking For?',
+                    'Choose an element type and build your favorite Pokemon collection.',
                     style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      height: 1.3,
+                      color: Colors.white70,
+                      fontSize: 14,
                     ),
                   ),
                   const SizedBox(height: 20),
-                  //FIRE GRID
                   Expanded(
                     child: GridView.builder(
                       itemCount: types.length,
@@ -94,7 +121,10 @@ class TypeSelectionScreen extends StatelessWidget {
                           ),
                       itemBuilder: (context, index) {
                         final type = types[index];
-                        return GestureDetector(
+                        return TypeCard(
+                          label: type['label'] as String,
+                          icon: type['icon'] as IconData,
+                          color: type['color'] as Color,
                           onTap: () {
                             Navigator.push(
                               context,
@@ -124,64 +154,6 @@ class TypeSelectionScreen extends StatelessWidget {
                               ),
                             );
                           },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(22),
-                              gradient: LinearGradient(
-                                colors: [
-                                  (type['color'] as Color).withAlpha(230),
-                                  (type['color'] as Color).withAlpha(153),
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: (type['color'] as Color).withAlpha(
-                                    102,
-                                  ),
-                                  blurRadius: 20,
-                                  offset: const Offset(0, 10),
-                                ),
-                              ],
-                            ),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  right: -20,
-                                  bottom: -20,
-                                  child: Icon(
-                                    type['icon'] as IconData,
-                                    size: 100,
-                                    color: Colors.white.withAlpha(38),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(16),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Icon(
-                                        type['icon'] as IconData,
-                                        color: Colors.white,
-                                        size: 28,
-                                      ),
-                                      const Spacer(),
-                                      Text(
-                                        type['label'] as String,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                         );
                       },
                     ),

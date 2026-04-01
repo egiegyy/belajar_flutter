@@ -73,3 +73,61 @@ class PokemonDetail {
     return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png';
   }
 }
+
+class FavoritePokemon {
+  final String favoriteId;
+  final String name;
+  final String typeLabel;
+  final String imageUrl;
+  final String? pokemonUrl;
+  final bool isManual;
+
+  FavoritePokemon({
+    required this.favoriteId,
+    required this.name,
+    required this.typeLabel,
+    required this.imageUrl,
+    this.pokemonUrl,
+    required this.isManual,
+  });
+
+  factory FavoritePokemon.fromMap(Map<String, dynamic> map) {
+    return FavoritePokemon(
+      favoriteId: map['favoriteId'] as String,
+      name: map['name'] as String,
+      typeLabel: map['typeLabel'] as String? ?? 'Unknown',
+      imageUrl: map['imageUrl'] as String? ?? '',
+      pokemonUrl: map['pokemonUrl'] as String?,
+      isManual: map['isManual'] as bool? ?? false,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'favoriteId': favoriteId,
+      'name': name,
+      'typeLabel': typeLabel,
+      'imageUrl': imageUrl,
+      'pokemonUrl': pokemonUrl,
+      'isManual': isManual,
+    };
+  }
+
+  FavoritePokemon copyWith({
+    String? favoriteId,
+    String? name,
+    String? typeLabel,
+    String? imageUrl,
+    String? pokemonUrl,
+    bool? isManual,
+  }) {
+    return FavoritePokemon(
+      favoriteId: favoriteId ?? this.favoriteId,
+      name: name ?? this.name,
+      typeLabel: typeLabel ?? this.typeLabel,
+      imageUrl: imageUrl ?? this.imageUrl,
+      pokemonUrl: pokemonUrl ?? this.pokemonUrl,
+      isManual: isManual ?? this.isManual,
+    );
+  }
+}

@@ -162,6 +162,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
                     pokemonName: pokemon.name,
                     pokemonUrl: pokemon.url,
                     accentColor: widget.typeColor,
+                    typeLabel: widget.typeLabel,
                   ),
                   transitionsBuilder: (_, animation, __, child) {
                     return FadeTransition(opacity: animation, child: child);

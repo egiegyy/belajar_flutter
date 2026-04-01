@@ -33,7 +33,7 @@ class PokemonApp extends StatelessWidget {
           margin: EdgeInsets.zero,
         ),
       ),
-      home: const SplashScreen(),
+      home: const SplashScreenPokemon(),
     );
   }
 }
