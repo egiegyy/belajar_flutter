@@ -17,32 +17,29 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(
+      child: FilledButton(
         onPressed: isLoading ? null : onPressed,
-        style: ElevatedButton.styleFrom(
+        style: FilledButton.styleFrom(
           backgroundColor: AppColors.primary,
-          foregroundColor: AppColors.white,
-          disabledBackgroundColor: AppColors.primary.withAlpha(140),
-          minimumSize: const Size(double.infinity, 54),
+          padding: const EdgeInsets.symmetric(vertical: 16),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          elevation: 0,
         ),
         child: isLoading
             ? const SizedBox(
-                width: 22,
-                height: 22,
+                height: 20,
+                width: 20,
                 child: CircularProgressIndicator(
-                  strokeWidth: 2.4,
+                  strokeWidth: 2,
                   color: Colors.white,
                 ),
               )
             : Text(
                 text,
                 style: const TextStyle(
-                  fontSize: 15,
                   fontWeight: FontWeight.w700,
+                  color: Colors.white,
                 ),
               ),
       ),

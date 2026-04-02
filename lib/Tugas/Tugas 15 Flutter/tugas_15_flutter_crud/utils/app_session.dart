@@ -1,45 +1,37 @@
-import 'package:flutter_application_1/Tugas/Tugas%2015%20Flutter/tugas_15_flutter_crud/models/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppSession {
-  static const String _isLoggedInKey = 'is_logged_in';
-  static const String _tokenKey = 'auth_token';
-  static String? token;
-  static UserModel? currentUser;
+  static const String _tokenKey = 'tugas15_auth_token';
+  static const String _passwordKey = 'tugas15_account_password';
+  static String? _token;
+  static String? _password;
 
-  static bool get isLoggedIn => token != null && token!.isNotEmpty;
-
-  static Future<void> saveLoginSession({
-    required String authToken,
-    UserModel? user,
-  }) async {
+  static Future<void> init() async {
     final prefs = await SharedPreferences.getInstance();
-    token = authToken;
-    currentUser = user;
-    await prefs.setBool(_isLoggedInKey, true);
-    await prefs.setString(_tokenKey, authToken);
+    _token = prefs.getString(_tokenKey);
+    _password = prefs.getString(_passwordKey);
   }
 
-  static Future<bool> restoreSession() async {
+  static bool get isLoggedIn => _token != null && _token!.isNotEmpty;
+
+  static String? get token => _token;
+  static String? get password => _password;
+
+  static Future<void> saveLogin(String token, {String? password}) async {
     final prefs = await SharedPreferences.getInstance();
-    final loggedIn = prefs.getBool(_isLoggedInKey) ?? false;
-    final savedToken = prefs.getString(_tokenKey);
-
-    if (!loggedIn || savedToken == null || savedToken.isEmpty) {
-      token = null;
-      currentUser = null;
-      return false;
+    await prefs.setString(_tokenKey, token);
+    _token = token;
+    if (password != null) {
+      await prefs.setString(_passwordKey, password);
+      _password = password;
     }
-
-    token = savedToken;
-    return true;
   }
 
   static Future<void> clear() async {
     final prefs = await SharedPreferences.getInstance();
-    token = null;
-    currentUser = null;
-    await prefs.remove(_isLoggedInKey);
     await prefs.remove(_tokenKey);
+    await prefs.remove(_passwordKey);
+    _token = null;
+    _password = null;
   }
 }

@@ -13,22 +13,27 @@ class SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final content = padding == null
+        ? child
+        : Padding(
+            padding: padding!,
+            child: child,
+          );
+
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(16),
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.border),
         boxShadow: const [
           BoxShadow(
             color: AppColors.cardShadow,
-            blurRadius: 18,
+            blurRadius: 20,
             offset: Offset(0, 8),
           ),
         ],
       ),
-      child: Padding(
-        padding: padding ?? const EdgeInsets.all(16),
-        child: child,
-      ),
+      child: content,
     );
   }
 }

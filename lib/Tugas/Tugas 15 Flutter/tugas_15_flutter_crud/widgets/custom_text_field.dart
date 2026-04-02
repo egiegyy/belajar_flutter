@@ -6,10 +6,9 @@ class CustomTextField extends StatelessWidget {
   final String label;
   final IconData icon;
   final bool obscureText;
-  final TextInputType keyboardType;
-  final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
   final Widget? suffixIcon;
-  final bool enabled;
+  final String? Function(String?)? validator;
 
   const CustomTextField({
     super.key,
@@ -17,10 +16,9 @@ class CustomTextField extends StatelessWidget {
     required this.label,
     required this.icon,
     this.obscureText = false,
-    this.keyboardType = TextInputType.text,
-    this.validator,
+    this.keyboardType,
     this.suffixIcon,
-    this.enabled = true,
+    this.validator,
   });
 
   @override
@@ -30,14 +28,9 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: keyboardType,
       validator: validator,
-      enabled: enabled,
-      style: const TextStyle(
-        color: AppColors.darkText,
-        fontSize: 15,
-      ),
       decoration: InputDecoration(
         labelText: label,
-        prefixIcon: Icon(icon, color: AppColors.primary),
+        prefixIcon: Icon(icon, color: AppColors.mutedText),
         suffixIcon: suffixIcon,
       ),
     );
